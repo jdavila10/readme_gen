@@ -1,79 +1,44 @@
-const inquirer = require("inquirer");
-const fs = require("fs");
-const util = require("util");
-
-const writeFileAsync = util.promisify(fs.writeFile);
-
-function promptUser() {
-    return inquirer.prompt([
-        {
-            type: "input",
-            name: "title",
-            message: "What is the name of your repository?"
-        },
-        {
-            type: "input",
-            name: "description",
-            message: "Where are you from?"
-        },
-        {
-            type: "input",
-            name: "tableOfContents",
-            message: "What is your favorite hobby?"
-        },
-        {
-            type: "input",
-            name: "installation",
-            message: "What is your favorite food?"
-        },
-        {
-            type: "input",
-            name: "usage",
-            message: "Enter your GitHub Username"
-        },
-        {
-            type: "input",
-            name: "license",
-            message: "Enter your LinkedIn URL."
-        },
-        {
-            type: "input",
-            name: "contributing",
-            message: "Enter your LinkedIn URL."
-        },
-        {
-            type: "input",
-            name: "test",
-            message: "Enter your LinkedIn URL."
-        }
-    ]);
-}
-
-function generateHTML(answers) {
-    return `
-
-  * Title 
-  ${answers.title}
-  * Description
-  * Table of Contents
-  * Installation
-  * Usage
-  * License
-  * Contributing
-  * Tests
-  * Questions
-`;
-}
-
-promptUser()
-    .then(function (answers) {
-        const md = generateHTML(answers);
-
-        return writeFileAsync("README.md", md);
-    })
-    .then(function () {
-        console.log("Successfully wrote to README.md");
-    })
-    .catch(function (err) {
-        console.log(err);
-    });
+const inquirer = require('inquirer')
+const fs = require('fs')
+inquirer.prompt([
+	{
+		name: 'title',
+		message: 'What is the title of your project?',
+		type: 'input'
+	},
+	{
+		name: 'licence',
+		message: 'What is licence?',
+		type: 'input'
+	},
+	{
+		name: 'description',
+		message: 'What is the description of your project?',
+		type: 'input'
+    },
+    
+]).then((answers) => {
+	let val = '';
+	for (const key in answers) {
+		console.log();
+		if(answers[key]){
+			if (key == 'title'){
+				val += '##' + answers[key] + '\n'
+			} else if (key == 'licence'){
+				val += '##' + answers[key] + '\n'
+            }else if (key == 'licence'){
+				val += '##' + answers[key] + '\n'
+			}else {
+				val += answers[key] + '\n'
+			}
+		}
+	}
+	fs.writeFile('README.md', val, (error) => {
+		if(error){
+			console.log(error);
+		}
+		else{
+			console.log('success');
+		}
+	})
+})
