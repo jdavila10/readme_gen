@@ -2,17 +2,8 @@
   # README Generator
 
 
-  ![](/image.png)
-
-
-
- ---
-
 
   ![](./Images/screenshot.png)
-
-
-  ---
 
 
   ## Table of Contents
@@ -24,8 +15,7 @@
   - [Contributors](#contributors)
   - [Contact](#contact)
 
-  ---  
-  
+
 
   ## Description
 
@@ -36,15 +26,13 @@
   This README Generator uses node JS and it works by asking a series of questions to the user and compiling them to create a new README.md file.
 
 
-  ---
-  
+ 
 
   ## Installation
   
   Open the project in terminal and run “npm init”, then once you have all the dependencies installed, run in the terminal “node index.js” and answer the questions.
 
  
-  ---
 
 
   ## License
@@ -52,15 +40,12 @@
   MIT
 
 
-  ---
-
 
   ## Contributors
 
   Jonathan Echevarria
 
 
-  ---
     
   
   ## Contact:
