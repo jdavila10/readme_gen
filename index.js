@@ -38,7 +38,7 @@ function promptUser() {
                 'Mozilla'
             ]
         },
-        {
+        { 
             type: 'input',
             name: 'contributors',
             message: 'Who contributed in this project?'
@@ -63,9 +63,11 @@ function genReadMe(answers) {
 
   ---
 
+
   ![](${answers.image})
 
   ---
+
 
   ## Table of Contents
 
@@ -79,29 +81,36 @@ function genReadMe(answers) {
 
   ---  
   
+
   ## Description
 
   ${answers.description}
 
   ---
   
+
   ## Installation
 
   ## ${answers.installation}
 
   ---
 
+
   ## License
 
   ${answers.license}
 
+
   ---
+
 
   ## Contributors
 
   ${answers.contributors}
 
+
   ---
+
 
   ## Test
 
@@ -140,42 +149,3 @@ init();
 
 
 
-
-
-
-
-
-// 	let val = '';
-// 	for (const key in answers) {
-// 		console.log();
-// 		if(answers[key]){
-// 			if (key == 'title'){
-// 				val += '## ' + '\n' + answers[key]
-// 			} else if (key == 'licence'){
-// 				val += '##' + answers[key] + '\n'
-//             }else if (key == 'licence'){
-// 				val += '##' + answers[key] + '\n'
-//             }else if (key == 'licence'){
-// 				val += '##' + answers[key] + '\n'
-//             }else if (key == 'licence'){
-// 				val += '##' + answers[key] + '\n'
-//             }else if (key == 'licence'){
-// 				val += '##' + answers[key] + '\n'
-//             }else if (key == 'licence'){
-// 				val += '##' + answers[key] + '\n'
-//             }else if (key == 'licence'){
-// 				val += '##' + answers[key] + '\n'
-//             }else {
-// 				val += answers[key] + '\n'
-// 			}
-// 		}
-// 	}
-// 	fs.writeFile('README.md', val, (error) => {
-// 		if(error){
-// 			console.log(error);
-// 		}
-// 		else{
-// 			console.log('You have successfully created a README file');
-// 		}
-// 	})
-// })
