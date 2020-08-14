@@ -2,7 +2,7 @@
   # README Generator
 
 
-
+  ![](/how-to.gif)
   ![](./Images/screenshot.png)
 
 
