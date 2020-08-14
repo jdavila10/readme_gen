@@ -91,7 +91,7 @@ function genReadMe(answers) {
 
   ## Installation
 
-  ## ${answers.installation}
+  ${answers.installation}
 
   ---
 
