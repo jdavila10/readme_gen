@@ -3,7 +3,6 @@
 
 
   ![](/how-to.gif)
-  ![](./Images/screenshot.png)
 
 
   ## Table of Contents
