@@ -1,8 +1,6 @@
 
   # README Generator
 
-  ---
-
 
   ![](/image.png)
 
